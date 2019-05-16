@@ -8,7 +8,7 @@ import (
 
 // FetchTorrents returns a list of torrent for a given IMDB
 func FetchTorrents(id string) (*Response, error) {
-	r, err := http.Get(fmt.Sprintf("https://eztv.ag/api/get-torrents?imdb_id=%s", id))
+	r, err := http.Get(fmt.Sprintf("https://eztv.io/api/get-torrents?imdb_id=%s", id))
 	if err != nil {
 		return nil, err
 	} else if r.StatusCode != 200 {
